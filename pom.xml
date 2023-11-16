@@ -14,7 +14,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.4</version>
+    <version>3.1.5</version>
   </parent>
 
   <properties>
@@ -27,6 +27,8 @@
     <module>microservice-gateway</module>
     <module>microservice-eureka</module>
     <module>microservice-config</module>
+    <module>microservice-student</module>
+    <module>microservice-course</module>
   </modules>
 
   <dependencies>
@@ -43,7 +45,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>3.1.4</version>
+        <version>3.1.5</version>
       </plugin>
     </plugins>
   </build>
