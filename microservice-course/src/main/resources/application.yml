@@ -1,25 +1,5 @@
-server:
-  port: 9090
-
 spring:
   application:
     name: msvc-course
   config:
     import: optional:configserver:http://localhost:8888
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/courseDB
-    username: root
-    password: admin123
-  jpa:
-    hibernate:
-      ddl-auto: create # create tables on startup
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # MySQL 5.x
-
-eureka:
-  instance:
-    hostname: localhost
-  client: # Eureka Client Configuration
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
