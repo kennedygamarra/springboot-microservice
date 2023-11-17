@@ -24,8 +24,13 @@ public class StudentController {
         return ResponseEntity.ok(studentService.findById(id));
     }
 
-    @GetMapping("/findAll")
+    @GetMapping("/find-all")
     public ResponseEntity<Iterable<Student>> findAll() {
         return ResponseEntity.ok(studentService.findAll());
+    }
+
+    @GetMapping("/find-by-course/{idCourse}")
+    public ResponseEntity<Iterable<Student>> findByCourseId(@PathVariable Long idCourse) {
+        return ResponseEntity.ok(studentService.findAllByCourseId(idCourse));
     }
 }
